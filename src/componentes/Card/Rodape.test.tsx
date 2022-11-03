@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import React from "react"
 import { RecoilRoot } from "recoil"
-import { useListaDeParticipantes } from "../state/hook/useListaDeParticipantes"
+import { useListaDeParticipantes } from "../../state/hook/useListaDeParticipantes"
 import Rodape from "./Rodape"
 
 jest.mock('../state/hook/useListaDeParticipantes', () => {
@@ -35,7 +35,7 @@ describe('onde não existem participantes suficientes', () => {
 })
 describe('quando existem participantes suficientes', () => {
     beforeEach(() => {
-        (useListaDeParticipantes as jest.Mock).mockReturnValue(['Ana', 'Carolina', 'Josefina'])
+        (useListaDeParticipantes as jest.Mock).mockReturnValue(['Ana', 'Carolina'])
     })
 
     test('a brincadeira pode ser iniciada', () => {

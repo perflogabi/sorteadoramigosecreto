@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useListaDeParticipantes } from "../state/hook/useListaDeParticipantes"
+import { useListaDeParticipantes } from "../../state/hook/useListaDeParticipantes"
 
 const Rodape = () => {
 
