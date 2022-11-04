@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { useListaDeParticipantes } from "../../state/hook/useListaDeParticipantes";
+import Sorteio from "./Sorteio";
 
 jest.mock('../state/hook/useListaDeParticipantes', () => {
     return {
@@ -9,7 +10,7 @@ jest.mock('../state/hook/useListaDeParticipantes', () => {
     }
 })
 
-describe('a pagina de sorteio', () => {
+describe('na pagina de sorteio', () => {
     const participantes = [
         'Ana',
         'Carolina',
