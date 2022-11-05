@@ -13,7 +13,7 @@ describe('dado um sorteio de amigo secreto', () => {
 
         const sorteio = realizarSorteio(participantes)
         participantes.forEach(participante => {
-            const amigoSecreto = sorteio.get(participantes)
+            const amigoSecreto = sorteio.get(participante)
             expect(amigoSecreto).not.toEqual(participante)
         })
     })
